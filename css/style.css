@@ -30,10 +30,11 @@ h1 {
     margin:0 0 6px; font-size: 28px;
 }
 
-.search-bar {
+.search-container {
     display:flex;
     gap:10px;
-    margin-bottom:12px;
+    max-width: 600px;
+    margin:20px auto;
 }
 
 input,button,select {
@@ -91,7 +92,7 @@ button:hover {
 .place-card {
     padding:8px ;
     max-height:550px;
-    overflow-y:auto;
+    margin-bottom: 20px;
 }
 
 .places{
@@ -101,9 +102,47 @@ button:hover {
     border-radius:10px
 }
 
+#placesSearch {
+    flex:1;
+    min-width: 0;
+    padding:12px 16px;
+    border-radius:8px;
+    font-size:16px;
+}
+
+#placesSearch:focus {
+    outline:2px solid black;
+    border-color:#167a53
+}
+
+#clearSearch {
+    padding:12px 18px;
+    border:none;
+    border-radius:8px;
+    background:#167a53;
+    color:white;
+    cursor:pointer;
+}
+
+#clearSeach:hover {
+    background:#167a53
+}
+
+#searchMessage {
+    max-width:600px;
+    margin:0 auto 16px;
+    color:black;
+}
+
 .places:hover,.places:focus {
     background:#167a53;
     outline:2px solid black;
+}
+
+@media(max-width: 480px) {
+    .seach-container {
+        gap:6px;
+    }
 }
 
 
