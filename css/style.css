@@ -1,7 +1,111 @@
  header {
     background-color:rgb(119, 170, 119);
     color:black;
-    padding:20;
-    box-shadow:
+    padding:20px 26px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom: 1px solid #e4e9e3;
+ }
+
+.style {
+    box-sizing:border-box;
+
 }
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background-color:rgb(119, 170, 119);
+    align-items:center;
+}
+
+main {
+    max-width:1200px;
+    margin:auto;
+    padding:22px
+}
+
+h1 {
+    margin:0 0 6px; font-size: 28px;
+}
+
+.search-bar {
+    display:flex;
+    gap:10px;
+    margin-bottom:12px;
+}
+
+input,button,select {
+    font:inherit;
+    border-radius: 10px;
+    padding:12px;
+}
+
+input {
+    flex:1;
+    min-width:0;
+    border:1px solid black;
+    background-color:rgb(119, 170, 119);    
+}
+
+button {
+    border:0;
+    background:#167a53;
+    color:white;
+    cursor:pointer;
+    font-weight:650;
+}
+
+button:hover {
+    filter:brightness(.94);
+}
+
+.filters button {
+    background-color:rgb(119, 170, 119);
+    color:white;
+    border: 1px solid black;
+    padding:8px 13px;
+}
+
+.filter button.active {
+    background:#167a53;
+    color:white;
+    border-color:#167a53;    
+}
+
+.layout {
+    display:grid;
+    grid-template-columns:340px;
+    gap:18px;
+    align-items:stretch;
+}
+
+.places-card,.map-panel {
+    background:white;
+    border:1px solid black;
+    border-radius:16px;
+    overflow:hidden;
+}
+
+.place-card {
+    padding:8px ;
+    max-height:550px;
+    overflow-y:auto;
+}
+
+.places{
+    padding:14px;
+    border-bottom:1px solid black;
+    cursor:pointer;
+    border-radius:10px
+}
+
+.places:hover,.places:focus {
+    background:#167a53;
+    outline:2px solid black;
+}
+
+
+
 

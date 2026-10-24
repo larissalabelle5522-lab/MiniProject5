@@ -11,9 +11,25 @@
 </head>
 
 <header>
-    <h1>Next Stop</h1>
-    <p>Find somewhere cheap and fun here!</p>
+        <h1>Next Stop</h1>
+        <p class="intro">Find somewhere cheap and fun here!</p>
+        
+        <form id="search-bar" class="search-row">
+            <input id="search" type="search"
+                placeholder="Search places or categories.."
+                aria-label="Search places"/>
+                <button type="submit">Search</button>
+                <button type="button" id="locate">Near me</button>
+        </form>
+    
+        <div class="filters" id="filters">
+            <button class="active" data-category="All">All places</button>
+            <button data-category="beach">Beach Trip</button>
+            <button data-category="out-of-state">Out of State</button>
+            <button data-category="hiking">Hiking Trips</button>
+        </div>
 
+        <div id="status"
     <nav>
         <ul>
             <a href="#about">What we have to offer</a>
@@ -77,7 +93,7 @@
             </p>
         </section>
 
-        <section class="place-card"
+        <section class="place-card">
             <h2>Montreal, Canada</h2>
             <p>
                 Montreal delivers French-speaking culture,cobblestone historic streets, and world-class bakeries.
