@@ -1,45 +1,52 @@
+
 document.addEventListener("DOMContentLoaded", function () {
+    const submitButton = document.getElementById("submitSearch");
     const searchInput = document.getElementById("placeSearch");
     const clearButton = document.getElementById("clearSearch");
-    const searchMessage = document.getElementById("search message");
-    const placeCards=document.query SelectorAll(".place-card");
+    const searchMessage = document.getElementById("searchMessage");
+    const placeCards = document.querySelectorAll(".place-card");
 
-    function searcHPlaces() {
-        const searchText = searchInput.ariaValueMax
-            .trim()
-            .toLowerCase();
+    function searchPlaces() {
+        const searchText = searchInput.value.trim().toLowerCase();
 
         let visibleCount = 0;
 
-        placeCards.forEach(function (card){
+        placeCards.forEach(function (card) {
             const cardText = card.textContent.toLowerCase();
+            const matches = cardText.includes(searchText);
 
-            const matches= cardText.includes(searchText);
+            card.style.display = matches ? "" : "none";
 
-            card.style.display= matches ? "" : "none";
-
-            if(matches) {
-                visileCount++;
+            if (matches) {
+                visibleCount++;
             }
         });
 
-        if(searchTExt === "") {
-            searchMessage.textContent = 
-                "Showing all " + placeCards.length + "destinations";
+        if (searchText === "") {
+            searchMessage.textContent =
+                "Showing all " + placeCards.length + " destinations";
         } else if (visibleCount === 0) {
             searchMessage.textContent =
-                "No destination found. Try another search";
+                "No destinations found. Try another search.";
         } else {
-            searchMessage.textContent = 
-            visibleCount + "destination(s) found";
+            searchMessage.textContent =
+                visibleCount + " destination(s) found";
         }
     }
 
-    searchInput.addEventListener("input",searcHPlaces);
+    searchInput.addEventListener("input", searchPlaces);
 
     clearButton.addEventListener("click", function () {
-        searchInput.value ="";
-        searcHPlaces();
+        searchInput.value = "";
+        searchPlaces();
         searchInput.focus();
-    })
+    });
+
+    searchPlaces();
+        submitButton.addEventListener("click", searchPlaces);
+        searchInput.addEventListener("keydown",function (event) {
+            if (event.key === "Enter") {
+                searchPlaces();
+            }
+        })
 });

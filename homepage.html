@@ -1,155 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next Stop</title>
     <meta name="description" content="Find somewhere cheap and fun here!">
-
-    <link rel="stylesheet" href=css/style.css>
-    <link rel="javascript" href="js/page.js">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/page.js"></script>
 </head>
-
-<header>
-        <h1>Next Stop</h1>
-</header>
-
-<header>
-        <div class="search-container">
-            <input
-                type="search"
-                id="placeSearch"
-                placeholder="Search places or categories.."
-                aria-label="Search travel destinations"
-                >
-                <button type="button" id="clearSearch">Clear</button>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>NextStop</h1>
+            <span class="eyebrow">Start a New Journey</span>
+            <p>Discover beautiful places and find adventures that fit your budget.</p>
         </div>
-        
-        <p id="searchMessage" aria-live="polite"></p>
+    </header>
 
-        
+    <header>
+        <div class="search-container">
+            <input type="text" id="placeSearch" placeholder="Search places or categories..">
+            <button type="button" id="searchButton">Submit</button>
+            <button type="button" id="clearSearch">Clear</button>
+            <p id="searchMessage" aria-live="polite"></p>
+        </div>
         <div class="filters" id="filters">
             <button class="active" data-category="All">All places</button>
             <button data-category="beach">Beach Trip</button>
             <button data-category="out-of-state">Out of State</button>
-            <button data-category="hiking">Hiking Trips</button>
+            <button data-category="hiking-trips">Hiking Trips</button>
         </div>
+        <nav>
+            <ul>
+                <li><a href="#about">What we have to offer</a></li>
+                <li><a href="#places">Places to visit</a></li>
+                <li><a href="#contact">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav>
-        <ul>
-            <a href="#about">What we have to offer</a>
-            <a href="#places">Places to visit</a>
-            <a href="#contact">Contact us</a>
-       </ul>
-    </nav>
-
-</header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <span class="eyebrow">Start a New Journey</span>
-            <p>
-                Discover beautiful places and find adventures that fit your budget.
-            </p>
-
-            <a href="#destinations" class="primary-btn">
-                Explore New Places
-            </a>
-        </div>
-    </section>
-    
-<div class="places">
-        <div class="places">
-            <article class="place-card" data-category="beach" data-search="cape may new jersey beach lighthouse histori seaside">
-               <div class="card-image cape-may">
-                <span class="card-tag">Beach & History</span>
-            </div>
-
+    <main class="places" id="places">
+        <article class="place-card" data-category="beach" data-search="cape may new jersey beach lighthouse historic seaside">
             <div class="card-content">
+                <img src="images/capemayNewjersey.avif" alt="Cape May seaside">
                 <h2 class="location">Cape May, New Jersey</h2>
-        
-                <p class="card-description">Explore Cape May's historic Victorian seaside town. Walk through the
-                    <br>Washingtonm Street Mall,look for smooth "Cape May Diamonds" on the beach,
-                    <br>and climb the Cape May Lighthouse for a few dollars.
-                </p>
-                <p><b>Current Weather:</b>58°F to 65°F during the day and 43°F to 48°F in the evening</p>
-                
-                 <span class="price-label">Estimated Total For 2</span> 
-                 <p class="price">$162-$324</p>
-    
-                <p>
-                    <li>Gas for a round trip if you are in Jersey: $15-$30</li>
-                    <li>Food and drinks: $20-$40</li>
-                    <li>Parking:$0-$20</li>
-                    <li>Cape May Lighthouse Admission: $12 adult/$8 child</li>
-                    <li>Beach visit: Free outside beach-tag season</li>
-                    <li>Souvenirs:$0-$20</li>
-                    <li>Staying in the area: $80-$170</li>
-                   
-                </p>
-            </article>
+                <p class="card-description">Explore Cape May's historic Victorian seaside town. Walk through the<br>Washington Street Mall, look for smooth "Cape May Diamonds" on the beach,<br>and climb the Cape May Lighthouse for a few dollars.</p>
+                <p><b>Current Weather:</b> 58°F to 65°F during the day and 43°F to 48°F in the evening</p>
+                <span class="price-label">Estimated Total For 2</span>
+                <p class="price">$162-$324</p>
+            </div>
+        </article>
 
-            <article class="place-card" data-category="out-of-state" data-search="san antonio texas reverwalk history riverboat pearl district">
-                <h2 class="location">San Antonio,Texas</h2>
-                <p>Affordable and fun with beautiful historic sites, riverboat cruises, and the lively Pearl District.
-                
+        <article class="place-card" data-category="out-of-state" data-search="san antonio texas riverwalk history riverboat pearl district">
+            <img src="images/sanantonioTexas.jpg" alt="San Antonio River Walk">
+            <div class="card-content">
+                <h2 class="location">San Antonio, Texas</h2>
+                <p class="description">Affordable and fun with beautiful historic sites, riverboat cruises, and the lively Pearl District.</p>
                 <span class="price-label">Cost:</span>
                 <p class="price">$60-$80</p>
+            </div>
+        </article>
 
-            </article>
-
-            <article class="place-card">
+        <article class="place-card" data-category="hiking-trips" data-search="gatlin pigeon forge tennessee hiking mountains">
+            <img src="images/gatlinburg-sunrise.jpg" alt="Sunrise over the Smoky Mountains">
+            <div class="card-content">
                 <h2 class="location">Gatlin & Pigeon Forge, Tennessee</h2>
-                <p class="card-description">
-                    Explore charming mountain towns next to Great Smoky Mountains National Park, offering hiking trails,
-                    <br>trolley rides, unique museums, and budget-friendly cabin rentals surrounded by the beautiful mountain 
-                    <br>views. 
-                </p>
-
+                <p class="card-description">Explore charming mountain towns next to Great Smoky Mountains National Park, offering hiking trails,<br>trolley rides, unique museums, and budget-friendly cabin rentals surrounded by beautiful mountain<br>views.</p>
                 <span class="price-label">Total Estimated Cost:</span>
                 <p class="price">$400-$765</p>
-            </article>
+            </div>
+        </article>
 
-            <article class="place-card">
-                <h2 class="location">Albania/Balkana Region</h2>
-                <p class="card-description"><b>Activities:</b>Mediterranean beaches along the Albanian Riviera,historic Ottoman towns, and dramatic
-                <br>mountain scenery.</p>
-
-                
+        <article class="place-card" data-category="hiking-trips" data-search="albania balkans region hiking trips historic mountains">
+            <div class="card-content">
+                <img src="images/albania.jpeg" alt="Mountain scenery in Albania">
+                <h2 class="location">Albania/Balkans Region</h2>
+                <p class="card-description"><b>Activities:</b> Mediterranean beaches along the Albanian Riviera, historic Ottoman towns, and dramatic<br>mountain scenery.</p>
                 <span class="price-label">Estimated Cost:</span>
-                <p class="price">$80-$105 per day(including lodging and local food)
-                </p>
-            </article>
+                <p class="price">$80-$105 per day (including lodging and local food)</p>
+            </div>
+        </article>
 
-            <article class="place-card">
+        <article class="place-card" data-category="historic" data-search="montreal canada historic bakeries">
+            <div class="card-content">
+                <img src="images/montreal.jpeg" alt="Montreal streets">
                 <h2 class="location">Montreal, Canada</h2>
-                <p class="card-description">
-                    Montreal delivers French-speaking culture,cobblestone historic streets, and world-class bakeries.
-                </p>
-
+                <p class="card-description">Montreal delivers French-speaking culture, cobblestone historic streets, and world-class bakeries.</p>
                 <span class="price-label">Estimated Cost:</span>
                 <p class="price">$360-$860</p>
-            </article>
+            </div>
+        </article>
 
-            <article class="place-card">
+        <article class="place-card" data-category="out-of-state" data-search="costa rica rainforest volcanoes forest">
+            <div class="card-content">
+                <img src="images/Costa-Rica-waterfall-family-main.webp" alt="Waterfall in Costa Rica">
                 <h2 class="location">Costa Rica</h2>
-                    <p class="card-description">Lush rainforest,active volcanoes,cloud forests, and incredible wildlife</p>
+                <p class="card-description">Lush rainforest, active volcanoes, cloud forests, and incredible wildlife.</p>
+                <p>Costa Rica can be pricey in peak dry winter, but traveling during green seasons brings dramatic drops in hotel and resort prices.</p>
+            </div>
+        </article>
+    </main>
 
-                    <p>Costa Rica can be pricey in peak dry winter,but traveling during green seasons brings dramatic drops in hotel and resort prices. </p>
-
-            </article>
-        </main>
-
-        <footer class="site-footer">
-            <section class="contact">
-                 <p>Call us at <span class="contact-link">tel:763-893-8989</span></p>
-            </section>
-
-            <address>
-                Written by Larissa LaBelle<br>
-               
-            </address>
-        </footer>
-    </body>
+    <footer class="site-footer">
+        <section class="contact" id="contact">
+            <h3>Contact Us</h3>
+            <p>Call us at <span class="contact-link">763-893-8989</span></p>
+        </section>
+        <address>Written by Larissa LaBelle</address>
+    </footer>
+</body>
 </html>

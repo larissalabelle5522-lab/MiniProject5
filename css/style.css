@@ -36,6 +36,22 @@ button, input {
     gap: 32px;
 }
 
+.nav ul li{
+    font-size:0.9rem;
+    display:flex;
+    align-items:center;
+    padding:10px 17px;
+    border: 1px solid #8ed2c1;
+    border-radius: 30px;
+    background:white;
+    color:#8ed2c1;
+    font-size:0.85rem;
+    font-weight: 700;
+    cursor:pointer;
+    transition:all 0.2s;
+
+}
+
 .navbar a {
     font-size:0.9rem;
     color:#e1e9eb;
@@ -52,22 +68,27 @@ button, input {
     align-items: center;
     padding: 75px 8%;
     color: white;
-    background:
-        linear-gradient(90deg, rgba(12, 34, 46, 0.91), rgba(12, 34, 46, 0.91))
-        url('../images/photo1.jpg')
-        center 53% / cover no-repeat;
+}
+
+.hero {
+    background-image: url("../images/photo1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
 }
 
 .hero h1 {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: clamp(2.5rem,5.5vw, 4.4rem);
-    line-height: 1.13;
-    letter-spacing: -2px;
-    margin-bottom:22px;
-}
-
-.hero h1 span{
-    color:#a7e0d0
+    font-size: 60px;
+    margin: 0;
 }
 
 .hero-content > p {
@@ -101,11 +122,12 @@ button, input {
     max-width: 600px;
 }
 
-.destination-count {
-    color:black;
-    font-size:0.85rem;
-    white-space:nowrap;
-    padding-bottom:7px;
+.destinations {
+    width: 100%;
+    max-width:1400px;
+    margin:0 auto;
+    padding: 50px 5%;
+    box-sizing:border-box;
 }
 
 .search-container {
@@ -115,7 +137,7 @@ button, input {
     max-width: 700px;
     padding:8px 12px 8px 18px;
     margin-bottom: 13px;
-    border: 1px solid #a7e0d0;
+    border: 1px solid black;
     background:white;
     box-shadow: 0 5px 20px rgba(20, 43, 59, 0.035);
 }
@@ -132,7 +154,7 @@ button, input {
     padding: 10px 0;
     border:none;
     outline:none;
-    color:#a7e0d0;
+    color:black;
     background:transparent
 }
 
@@ -140,7 +162,7 @@ button, input {
     border: 0;
     border-radius: 7px;
     background:white;
-    color:#8ed2c1;
+    color:black;
     padding:8px 12px;
     cursor:pointer;
     font-weight:700;
@@ -191,14 +213,17 @@ filters button {
     display:grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap:25px;
+    width:1000px;
+    height:auto;
     align-items: stretch;
 }
 
 .place-card {
     display:flex;
     flex-direction:column;
-    height:100%;
     min-width: 0;
+    width:100%;
+    height:auto;
     overflow:hidden;
     border:1px solid black;
     border-radius:16px;
@@ -211,10 +236,21 @@ filters button {
     box-shadow: 0 16px 35px rhba(20,43,59,0.10);
 }
 
-.card-image {
+.card-content img{
     width:100%;
-    height:215px;
-    flex-shrink:0;
+    height:180px;
+    object-fit:cover;
+}
+
+.card-content h2 {
+    font-size:20px;
+    margin:0;
+}
+
+.card-content p {
+    font-size:14px;
+    line-height: 1.5;
+    margin:0;
 }
 
 .card-image:after {
@@ -226,7 +262,7 @@ filters button {
 }
 
 .card-content {
-    padding:21px;
+    padding:21;
 }
 
 .location {
@@ -257,7 +293,7 @@ filters button {
     align-items:center;
     justify-content:space-between;
     gap: 10px;
-    padding-top 16px;
+    padding-top: 16px;
 }
 
 .price-label {
@@ -277,7 +313,7 @@ filters button {
 }
 
 .contact-section {
-    padding:75; 8%;
+    padding:75 8%;
     text-align:center;
     background:white;
 }
