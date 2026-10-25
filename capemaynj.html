@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Stop</title>
+
+    <link rel="stylesheet" href="css/places.css">
+    <script src="javascript" href="js/page.js"></script>
+</head>
+
+    <header>
+        <h1>NextStop</h1>
+        <div class="search-container">
+        <input type="text" id="placeSearch" placeholder="Search places or categories..">
+            <button type="button" id="searchButton">Submit</button>
+            <button type="button" id="clearSearch">Clear</button>
+            <p id="searchMessage" aria-live="polite"></p>
+        </div>
+            
+        <div class="filters" id="filters">
+            <button class="active" data-category="All">All places</button>
+            <button data-category="beach">Beach Trip</button>
+            <button data-category="out-of-state">Out of State</button>
+            <button data-category="hiking-trips">Hiking Trips</button>
+        </div>
+        
+    </header>
+
+    <body>
+        <article class="place-card" data-category="beach" data-search="cape may new jersey beach lighthouse historic seaside">
+            <div class="card-content">
+                
+                <img src="images/capemayNewjersey.avif" alt="Cape May, New Jersey" class="destination-image">
+
+                <h2 class="location">Cape May, New Jersey</h2>
+                <p class="card-description">Explore Cape May's historic Victorian seaside town. Walk through the<br>Washington Street Mall, look for smooth "Cape May Diamonds" on the beach,<br>and climb the Cape May Lighthouse for a few dollars.</p>
+                <p><b>Current Weather:</b> 58°F to 65°F during the day and 43°F to 48°F in the evening</p>
+                <span class="price-label">Estimated Total For 2</span>
+                <p class="price">$162-$324</p>
+            </div>
+        </article>
+    </body>
+</html>
+
+

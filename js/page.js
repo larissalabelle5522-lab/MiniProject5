@@ -50,3 +50,21 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
 });
+
+
+document.querySelectorAll(".place-card").forEach(function (card) {
+    card.style.cursor = "pointer";
+
+    card.addEventListener("click", function () {
+        const location = card.querySelector(".location, h2");
+
+        if (location) {
+            const placeName = location.textContent.trim();
+            const mapsURL =
+                "https://www.google.com/maps/search/?api=1&query=" +
+                encodeURIComponent(placeName);
+
+            window.open(mapsURL, "_blank", "noopener,noreferrer");
+        }
+    });
+});

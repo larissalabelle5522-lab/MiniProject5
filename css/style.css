@@ -215,7 +215,7 @@ filters button {
     gap:25px;
     width:1000px;
     height:auto;
-    align-items: stretch;
+    align-items: right;
 }
 
 .place-card {
@@ -224,11 +224,11 @@ filters button {
     min-width: 0;
     width:100%;
     height:auto;
-    overflow:hidden;
+    align-items:right;
     border:1px solid black;
     border-radius:16px;
-    background:white;
-    box-shadow: 0 5px 20px rgba(20, 43,59,0.035);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .place-card:hover {
