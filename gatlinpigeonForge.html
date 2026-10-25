@@ -9,3 +9,33 @@
     <link rel="stylesheet" href="css/places.css">
     <script src="javascript" href="js/page.js"></script>
 </head>
+
+   <header>
+        <h1>NextStop</h1>
+        <div class="search-container">
+        <input type="text" id="placeSearch" placeholder="Search places or categories..">
+            <button type="button" id="searchButton">Submit</button>
+            <button type="button" id="clearSearch">Clear</button>
+            <p id="searchMessage" aria-live="polite"></p>
+        </div>
+            
+        <div class="filters" id="filters">
+            <button class="active" data-category="All">All places</button>
+            <button data-category="beach">Beach Trip</button>
+            <button data-category="out-of-state">Out of State</button>
+            <button data-category="hiking-trips">Hiking Trips</button>
+        </div>
+        
+    </header>
+
+<body>
+        <article class="place-card" data-category="hiking-trips" data-search="gatlin pigeon forge tennessee hiking mountains">
+            <img src="images/gatlinburg-sunrise.jpg" alt="Sunrise over the Smoky Mountains" class="destination-image">
+            <div class="card-content">
+                <h2 class="location">Gatlin & Pigeon Forge, Tennessee</h2>
+                <p class="card-description">Explore charming mountain towns next to Great Smoky Mountains National Park, offering hiking trails,<br>trolley rides, unique museums, and budget-friendly cabin rentals surrounded by beautiful mountain<br>views.</p>
+                <span class="price-label">Total Estimated Cost:</span>
+                <p class="price">$400-$765</p>
+            </div>
+        </article>
+</body>

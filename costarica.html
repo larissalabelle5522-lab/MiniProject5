@@ -9,3 +9,21 @@
     <link rel="stylesheet" href="css/places.css">
     <script src="javascript" href="js/page.js"></script>
 </head>
+
+   <header>
+        <h1>NextStop</h1>
+        <div class="search-container">
+        <input type="text" id="placeSearch" placeholder="Search places or categories..">
+            <button type="button" id="searchButton">Submit</button>
+            <button type="button" id="clearSearch">Clear</button>
+            <p id="searchMessage" aria-live="polite"></p>
+        </div>
+            
+        <div class="filters" id="filters">
+            <button class="active" data-category="All">All places</button>
+            <button data-category="beach">Beach Trip</button>
+            <button data-category="out-of-state">Out of State</button>
+            <button data-category="hiking-trips">Hiking Trips</button>
+        </div>
+        
+    </header>
