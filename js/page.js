@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("placeSearch");
     const clearButton = document.getElementById("clearSearch");
     const searchMessage = document.getElementById("searchMessage");
-    const placeCards = document.querySelectorAll(".place-card");
+    const placeCards = document.querySelectorAll(".place-card").length;
 
     function searchPlaces() {
         const searchText = searchInput.value.trim().toLowerCase();
@@ -51,20 +51,28 @@ document.addEventListener("DOMContentLoaded", function () {
         })
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll("#filters button");
+    const cards = document.querySelectorAll("#places .place-card");
 
-document.querySelectorAll(".place-card").forEach(function (card) {
-    card.style.cursor = "pointer";
+    buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const category = button.getAttribute("data-category");
 
-    card.addEventListener("click", function () {
-        const location = card.querySelector(".location, h2");
+            buttons.forEach(function (btn) {
+                btn.classList.remove("active");
+            });
 
-        if (location) {
-            const placeName = location.textContent.trim();
-            const mapsURL =
-                "https://www.google.com/maps/search/?api=1&query=" +
-                encodeURIComponent(placeName);
+            button.classList.add("active");
 
-            window.open(mapsURL, "_blank", "noopener,noreferrer");
-        }
+            cards.forEach(function (card) {
+                const cardCategory = card.getAttribute("data-category");
+
+                card.style.display =
+                    category === "All" || cardCategory === category
+                        ? ""
+                        : "none";
+            });
+        });
     });
 });
