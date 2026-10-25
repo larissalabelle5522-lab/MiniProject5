@@ -7,7 +7,7 @@
     <meta name="description" content="Find somewhere cheap and fun here!">
     
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/page.js"></script>
+    <script src="js/page.js" defer></script>
 </head>
 <body>
     <header class="hero">
@@ -25,80 +25,89 @@
             <button type="button" id="clearSearch">Clear</button>
             <p id="searchMessage" aria-live="polite"></p>
         </div>
-        <div class="filters" id="filters">
-            <button class="active" data-category="All">All places</button>
-            <button data-category="beach">Beach Trip</button>
-            <button data-category="out-of-state">Out of State</button>
-            <button data-category="hiking-trips">Hiking Trips</button>
-        </div>
+
         <nav>
-            <ul>
-                <li><a href="#about">What We Have to Offer</a></li>
-                <li><a href="#places">Places to Visit</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
+            <div class="filters" id="filters">
+                <button class="active" data-category="All">All places</button>
+                <button data-category="beach">Beach Trip</button>
+                <button data-category="out-of-state">Out of State</button>
+                <button data-category="hiking-trips">Hiking Trips</button>
+                <button data-category="historic">Historic Value Sites</button>
+            </div>
         </nav>
     </header>
 
     <main class="places" id="places">
         <article class="place-card" data-category="beach" data-search="cape may new jersey beach lighthouse historic seaside">
-            <div class="card-content">
-                <img src="images/capemayNewjersey.avif" alt="Cape May seaside" class="destination-image">
-                <h2 class="location">Cape May, New Jersey</h2>
-                <p class="card-description">Explore Cape May's historic Victorian seaside town. Walk through the<br>Washington Street Mall, look for smooth "Cape May Diamonds" on the beach,<br>and climb the Cape May Lighthouse for a few dollars.</p>
-                <p><b>Current Weather:</b> 58°F to 65°F during the day and 43°F to 48°F in the evening</p>
-                <span class="price-label">Estimated Total For 2</span>
-                <p class="price">$162-$324</p>
-            </div>
+            <a href="capemaynj.html" class="place-card-link">
+                <div class="card-content">
+                    <img src="images/capemayNewjersey.avif" alt="Cape May seaside" class="destination-image">
+                    <h2 class="location">Cape May, New Jersey</h2>
+                    <p class="card-description">Explore Cape May's historic Victorian seaside town. Walk through the<br>Washington Street Mall, look for smooth "Cape May Diamonds" on the beach,<br>and climb the Cape May Lighthouse for a few dollars.</p>
+                    <p><b>Current Weather:</b> 58°F to 65°F during the day and 43°F to 48°F in the evening</p>
+                    <span class="price-label">Estimated Total For 2</span>
+                    <p class="price">$162-$324</p>
+                </div>
+            </a>
         </article>
 
         <article class="place-card" data-category="out-of-state" data-search="san antonio texas riverwalk history riverboat pearl district">
-            <img src="images/sanantonioTexas.jpg" alt="San Antonio River Walk" class="destination-image">
-            <div class="card-content">
-                <h2 class="location">San Antonio, Texas</h2>
-                <p class="description">Affordable and fun with beautiful historic sites, riverboat cruises, and the lively Pearl District.</p>
-                <span class="price-label">Cost:</span>
-                <p class="price">$60-$80</p>
-            </div>
+            <a href="sanantonioTexas.html" class="place-card-link">
+                <div class="card-content">
+                    <img src="images/sanantonioTexas.jpg" alt="San Antonio River Walk" class="destination-image">
+                    <h2 class="location">San Antonio, Texas</h2>
+                    <p class="description">Affordable and fun with beautiful historic sites, riverboat cruises, and the lively Pearl District.</p>
+                    <span class="price-label">Cost:</span>
+                    <p class="price">$60-$80</p>
+                </div>
+            </a>
         </article>
 
         <article class="place-card" data-category="hiking-trips" data-search="gatlin pigeon forge tennessee hiking mountains">
-            <div class="card-content">
-                <img src="images/gatlinburg-sunrise.jpg" alt="Sunrise over the Smoky Mountains" class="destination-image">
-                <h2 class="location">Gatlin & Pigeon Forge, Tennessee</h2>
-                <p class="card-description">Explore charming mountain towns next to Great Smoky Mountains National Park, offering hiking trails,<br>trolley rides, unique museums, and budget-friendly cabin rentals surrounded by beautiful mountain<br>views.</p>
-                <span class="price-label">Total Estimated Cost:</span>
-                <p class="price">$400-$765</p>
-            </div>
+            <a href="gatlinpigeonForge.html" class="place-card-link">
+                <div class="card-content">
+                    <img src="images/gatlinburg-sunrise.jpg" alt="Sunrise over the Smoky Mountains" class="destination-image">
+                    <h2 class="location">Gatlin & Pigeon Forge, Tennessee</h2>
+                    <p class="card-description">Explore charming mountain towns next to Great Smoky Mountains National Park, offering hiking trails,<br>trolley rides, unique museums, and budget-friendly cabin rentals surrounded by beautiful mountain<br>views.</p>
+                    <span class="price-label">Total Estimated Cost:</span>
+                    <p class="price">$400-$765</p>
+                </div>
+            </a>
         </article>
 
         <article class="place-card" data-category="hiking-trips" data-search="albania balkans region hiking trips historic mountains">
-            <div class="card-content">
-                <img src="images/albania.jpeg" alt="Mountain scenery in Albania" class="destination-image">
-                <h2 class="location">Albania/Balkans Region</h2>
-                <p class="card-description"><b>Activities:</b> Mediterranean beaches along the Albanian Riviera, historic Ottoman towns, and dramatic<br>mountain scenery.</p>
-                <span class="price-label">Estimated Cost:</span>
-                <p class="price">$80-$105 per day (including lodging and local food)</p>
-            </div>
+            <a href="albania.html" class="place-card-link">
+                <div class="card-content">
+                    <img src="images/albania.jpeg" alt="Mountain scenery in Albania" class="destination-image">
+                    <h2 class="location">Albania/Balkans Region</h2>
+                    <p class="card-description"><b>Activities:</b> Mediterranean beaches along the Albanian Riviera, historic Ottoman towns, and dramatic<br>mountain scenery.</p>
+                    <span class="price-label">Estimated Cost:</span>
+                    <p class="price">$80-$105 per day (including lodging and local food)</p>
+                </div>
+            </a>
         </article>
 
         <article class="place-card" data-category="historic" data-search="montreal canada historic bakeries">
-            <div class="card-content">
-                <img src="images/montreal.jpeg" alt="Montreal streets">
-                <h2 class="location">Montreal, Canada</h2>
-                <p class="card-description">Montreal delivers French-speaking culture, cobblestone historic streets, and world-class bakeries.</p>
-                <span class="price-label">Estimated Cost:</span>
-                <p class="price">$360-$860</p>
-            </div>
+            <a href="montreal.html" class="place-card-link">
+                <div class="card-content">
+                    <img src="images/montreal.jpeg" alt="Montreal streets" class="destination-image">
+                    <h2 class="location">Montreal, Canada</h2>
+                    <p class="card-description">Montreal delivers French-speaking culture, cobblestone historic streets, and world-class bakeries.</p>
+                    <span class="price-label">Estimated Cost:</span>
+                    <p class="price">$360-$860</p>
+                </div>
+            </a>
         </article>
 
         <article class="place-card" data-category="out-of-state" data-search="costa rica rainforest volcanoes forest">
-            <div class="card-content">
-                <img src="images/Costa-Rica-waterfall-family-main.webp" alt="Waterfall in Costa Rica" class="destination-image">
-                <h2 class="location">Costa Rica</h2>
-                <p class="card-description">Lush rainforest, active volcanoes, cloud forests, and incredible wildlife.</p>
-                <p>Costa Rica can be pricey in peak dry winter, but traveling during green seasons brings dramatic drops in hotel and resort prices.</p>
-            </div>
+           <a href="costarica.html" class="place-card-link">
+                <div class="card-content">
+                    <img src="images/Costa-Rica-waterfall-family-main.webp" alt="Waterfall in Costa Rica" class="destination-image">
+                    <h2 class="location">Costa Rica</h2>
+                    <p class="card-description">Lush rainforest, active volcanoes, cloud forests, and incredible wildlife.</p>
+                    <p>Costa Rica can be pricey in peak dry winter, but traveling during green seasons brings dramatic drops in hotel and resort prices.</p>
+                </div>
+            </a>    
         </article>
     </main>
 

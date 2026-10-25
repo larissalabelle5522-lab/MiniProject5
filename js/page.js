@@ -6,9 +6,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchMessage = document.getElementById("searchMessage");
     const placeCards = document.querySelectorAll(".place-card").length;
 
+
+    //Only run the search code on pages with a search bar.
+    if (!searchInput || !clearButton ||
+        !submitButton || !searchMessage) {
+        return;
+    )
+
+
     function searchPlaces() {
         const searchText = searchInput.value.trim().toLowerCase();
-
         let visibleCount = 0;
 
         placeCards.forEach(function (card) {
@@ -74,5 +81,17 @@ document.addEventListener("DOMContentLoaded", function () {
                         : "none";
             });
         });
-    });
+
+document.querySelectorAll(".place-card").forEach(function (card) {
+    card.style.cursor = "pointer";
+
+    card.addEventListener("click", function () {
+        const page = card.getAttribute("data-page");
+
+        if(page) {
+            window.location.href = page;
+        }
+    })
 });
+
+

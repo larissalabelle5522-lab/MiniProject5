@@ -22,7 +22,7 @@ header {
     color:black
 }
 
-.navbar {
+.nav {
     display: flex;
     align-items: center;
     gap: 32px;
@@ -44,14 +44,45 @@ header {
 
 }
 
-.navbar a {
+body nav a {
     font-size:0.9rem;
-    color:#e1e9eb;
+    color:black;
     transition: color 0.2 ease;
+
 }
 
-.navbar a:hover {
+.nav a:hover {
     color:#8ed2c1;
+}
+
+filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 12px 0 30px;
+}
+
+filters button {
+    padding:10px 17px;
+    border: 1px solid #8ed2c1;
+    border-radius: 30px;
+    background:white;
+    color:#8ed2c1;
+    font-size:0.85rem;
+    font-weight: 700;
+    cursor:pointer;
+    transition:all 0.2s;
+}
+
+.filters button:hover {
+    border-color:#8ed2c1;
+    color:#a7e0d0;
+}
+
+.filters button.active {
+    background:#8ed2c1;
+    border-color:#8ed2c1;
+    color:black
 }
 
 .destination-image {
@@ -62,6 +93,12 @@ header {
     height:auto;
     object-fit:cover;
     object-position:center;
+}
+
+.place-card-link {
+    display:block;
+    color:inherit;
+    text-decoration:none;
 }
 
 .place-card {
